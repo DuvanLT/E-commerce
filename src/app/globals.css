@@ -88,6 +88,7 @@ button{
     border-radius: 24px;
     object-fit: cover;
 }
+
 .startpoint{
     margin-left: 65px;
     font-size: 20px;
@@ -104,6 +105,7 @@ header{
     display: flex;
     flex-direction: column;
     background: #fff;
+    margin-bottom: 20px;
 
     input{
         padding: 8px 20px;

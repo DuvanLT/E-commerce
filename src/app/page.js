@@ -1,5 +1,4 @@
 'use client'
-import Header from "./component/Header";
 import useFetch from './api/Api';
 import Card from './component/Card'
 import Category from './component/Category';
@@ -9,7 +8,6 @@ export default function Home() {
 
     return (
       <>
-        <Header />
         <Category />
         <div className='container'>
             {data.map(item => (
