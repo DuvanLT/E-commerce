@@ -9,7 +9,7 @@ export default function Header() {
             <div className="logo">
             Emezon
             </div>
-            <form>
+            <form className="form_desktop">
             <input type="text" placeholder="Slim fit" name="search" />
             </form>
             <div className="shopycar">
@@ -18,6 +18,9 @@ export default function Header() {
                 </button>
             </div>
             </nav>
+            <form className="phone_input">
+            <input type="text" placeholder="Slim fit" name="search" />
+            </form>
             <nav className="bottom_nav">
                 <ul>
                     <li  onClick={() => {router.push("/jewellery")}}>Jewellery</li>

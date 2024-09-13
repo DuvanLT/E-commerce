@@ -70,6 +70,7 @@ button{
 .category{
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 20px;
     margin: 30px;
 }
@@ -137,3 +138,30 @@ header{
     }
 
 }
+
+.form_desktop{
+display: block;
+}
+
+.phone_input{
+    display: none;
+}
+
+@media (max-width: 450px) {
+    .category_container{
+        margin-top: 30px;
+    }
+
+    .phone_input{
+        display: block;
+        display: flex;
+        justify-content: center;
+        margin: 0px 0px 20px 0px;
+    }
+    .form_desktop{
+        display: none;
+        }
+        
+
+}
+
