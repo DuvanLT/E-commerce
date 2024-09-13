@@ -1,9 +1,12 @@
+'use client'
+import { useRouter } from "next/navigation"
 export default function Header() {
+    const router = useRouter()
     return(
         <>
         <header>
             <nav className="top_nav">
-            <div className="logo">
+            <div className="logo" onClick={() => { router.push(`/`)   }} >
             Emezon
             </div>
             <form className="form_desktop">

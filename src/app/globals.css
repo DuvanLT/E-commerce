@@ -4,6 +4,10 @@ body{
     margin: 0;
     box-sizing: border-box;
 }
+
+.logo{
+    cursor: pointer;
+}
 .container{
     display: flex;
     flex-direction: row;

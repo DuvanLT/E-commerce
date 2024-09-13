@@ -12,12 +12,12 @@ export default function jewellery() {
         <>
         <span className='startpoint' onClick={() => {router.push("/")}}>Home / </span><span className='endpoint'>Eletronics</span>
         <div className='container'>
-        {data.map(item => (
-      
-            <Card key={item.id} title={item.title} image={item.image} price={item.price}  />
-      
-        ))}
-          </div>
+            {data.map(item => (
+            <div  key={item.id} onClick={() => { router.push(`/product/${item.id}`)}}>
+             <Card title={item.title} image={item.image} price={item.price}/>
+             </div>
+            ))}
+        </div>
         </>
     )
 }
