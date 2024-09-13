@@ -9,7 +9,7 @@ export default function jewellery() {
 
     return(
         <>
-        <span className='startpoint' onClick={() => {router.push("/")}}>Home / </span><span className='endpoint'>Jewellery</span>
+        <span className='startpoint' onClick={() => {router.push("/")}}>Home / </span><span className='endpoint'>Jewelery</span>
         <div className='container'>
         {data.map(item => (
       

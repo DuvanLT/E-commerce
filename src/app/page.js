@@ -7,8 +7,9 @@ export default function Home() {
     const { data } = useFetch('https://fakestoreapi.com/products?limit=10');
 
     return (
-      <>
+      <> 
         <Category />
+        <h1>PRODUCTS</h1>
         <div className='container'>
             {data.map(item => (
              <Card key={item.id} title={item.title} image={item.image} price={item.price}  />

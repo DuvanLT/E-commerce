@@ -1,7 +1,4 @@
-'use client'
-import { useRouter } from "next/navigation"
 export default function Header() {
-    const router = useRouter()
     return(
         <>
         <header>
@@ -21,14 +18,6 @@ export default function Header() {
             <form className="phone_input">
             <input type="text" placeholder="Slim fit" name="search" />
             </form>
-            <nav className="bottom_nav">
-                <ul>
-                    <li  onClick={() => {router.push("/jewellery")}}>Jewellery</li>
-                    <li  onClick={() => {router.push("/electronics")}}>Eletronics</li>
-                    <li  onClick={() => {router.push("/mens-clothing")}}>Mens</li>
-                    <li  onClick={() => {router.push("/women-clothing")}}>Women</li>
-                </ul>
-        </nav>
         </header>
     
         </>
