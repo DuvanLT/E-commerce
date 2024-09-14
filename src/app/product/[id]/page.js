@@ -3,8 +3,10 @@ import { useParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import useFetch from '../../api/Api';
 import Card from '@/app/component/Card';
+import { useRouter } from 'next/navigation';
 
 export default function Product() {
+    const router = useRouter()
     const { data: productData, error: productError } = useFetch('https://fakestoreapi.com/products/');
     const [similarData, setSimilarData] = useState([]);
     
