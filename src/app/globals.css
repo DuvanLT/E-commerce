@@ -160,7 +160,7 @@ display: block;
 .dinamic_photo{
     max-width: 350px;
     min-height: 280px;
-    min-width: 280px;
+    min-width: 250px;
     margin: 0 auto;
 }
 
