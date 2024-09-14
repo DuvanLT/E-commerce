@@ -7,7 +7,7 @@ export default function Card({title,image,price}) {
                 </div>
                 <div className="card_info">
                     <h2>{title}</h2>
-                    <p>$ {price}</p>
+                    <p className="howmuch">$ {price}</p>
                 </div>
                 <div className="buttons_container">
                     <button>

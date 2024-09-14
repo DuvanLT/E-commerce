@@ -17,7 +17,7 @@ body{
     margin-top: 40px;
 }
 
-h1{
+h1,.similar{
     margin-left: 65px;
     margin-top: 80px;
 }
@@ -41,6 +41,9 @@ h1{
     font-size: 14px;
     font-weight: 300;
     cursor: pointer;
+}
+.howmuch{
+    color: #ff5959;
 }
 
 .card_container p{
@@ -178,10 +181,11 @@ display: block;
     .price{
         font-size: 24px;
         font-weight: 600;
+        color: #ff5959;
     }
-
     
 }
+
 
 .dinamic_button{
     display: flex;

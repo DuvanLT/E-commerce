@@ -59,6 +59,7 @@ export default function Product() {
                 </div>
             </div>
         </section>
+        <h2 className='similar'>MÁS DE LO QUE BUSCAS:</h2>
         <div className='container'>
             {similarData?.map(similarItem => (
                 <div key={similarItem.id} onClick={() => { router.push(`/product/${similarItem.id}`) }}>
