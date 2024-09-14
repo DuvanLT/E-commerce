@@ -209,6 +209,13 @@ display: block;
         }
 }
 
+@media (max-width: 700px) {
+    h1,.similar{
+        margin: 80px 0;
+        text-align: center;
+    }
+}
+
 @media (min-width:800px){
     .dinamic_container{
         flex-direction: row;
