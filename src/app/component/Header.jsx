@@ -1,7 +1,34 @@
 'use client'
 import { useRouter } from "next/navigation"
+import { useEffect, useState } from "react"
+import useFetch from "../api/Api"
+import Card from "./Card"
 export default function Header() {
     const router = useRouter()
+    const [query, setQuery] = useState("")
+    const [filteredProducts, setFilteredProducts] = useState([])
+    const { data} = useFetch(`https://fakestoreapi.com/products`)
+
+
+    function handleChange(event) {
+        const searchQuery = event.target.value
+        setQuery(searchQuery)
+    }
+
+    useEffect(() => {
+        if (query && data) { 
+            const searchProducts = () => {
+                const searchFilter = data.filter((item) =>
+                    item.title.toLowerCase().includes(query.toLowerCase())
+                )
+                setFilteredProducts(searchFilter) 
+            }
+            searchProducts()
+        } else {
+            setFilteredProducts([])
+        }
+    },[query, data]) 
+
     return(
         <>
         <header>
@@ -9,8 +36,8 @@ export default function Header() {
             <div className="logo" onClick={() => { router.push(`/`)   }} >
             Emezon
             </div>
-            <form className="form_desktop">
-            <input type="text" placeholder="Slim fit" name="search" />
+            <form className="form_desktop"  onSubmit={(e) => e.preventDefault()}   >
+            <input type="text" placeholder="Search a product" name="search"  onChange={handleChange}/>
             </form>
             <div className="shopycar">
                 <button>
@@ -18,10 +45,24 @@ export default function Header() {
                 </button>
             </div>
             </nav>
-            <form className="phone_input">
-            <input type="text" placeholder="Slim fit" name="search" />
+            <form className="phone_input" onSubmit={(e) => e.preventDefault()} >
+            <input type="text" placeholder="Search a product" name="search" onChange={handleChange} />
             </form>
         </header>
+
+        <div>
+                {filteredProducts.length > 0 ? (
+                    <div className='container'>
+                        {filteredProducts.map((item) => (
+                            <div key={item.id} onClick={() => { router.push(`/product/${item.id}`) }}>
+                                <Card title={item.title} image={item.image} price={item.price} />
+                            </div>
+                        ))}
+                    </div>
+                ) : (
+                    <p></p>
+                )}
+            </div>
     
         </>
     )
