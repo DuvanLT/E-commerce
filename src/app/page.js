@@ -3,7 +3,6 @@ import useFetch from './api/Api';
 import Card from './component/Card'
 import Category from './component/Category';
 import { useRouter } from "next/navigation"
-import producto from './product/[id]/page';
 export default function Home() {
  
     const { data } = useFetch('https://fakestoreapi.com/products?limit=10');

@@ -7,7 +7,7 @@ export default function Header() {
     const router = useRouter()
     const [query, setQuery] = useState("")
     const [filteredProducts, setFilteredProducts] = useState([])
-    const { data} = useFetch(`https://fakestoreapi.com/products`)
+    const {data} = useFetch(`https://fakestoreapi.com/products`)
 
 
     function handleChange(event) {
