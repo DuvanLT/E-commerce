@@ -217,18 +217,15 @@ footer{
         color: #59ff9e;
         font-size: 20px;
     }
-.footer_container{
-    display: flex;
-}
-.footer_socialMedia{
-    display: flex;
-}
 p{
     text-align: center;
 }
 a{
     color: #ff5959;
 }
+}
+.footer_socialMedia, .footer_container{
+    display: flex;
 }
 
 
@@ -255,6 +252,7 @@ a{
     }
     .footer_container{
         flex-wrap: wrap;
+        display: flex;
     }
 }
 
