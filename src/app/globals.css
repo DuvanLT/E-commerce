@@ -78,6 +78,10 @@ button{
     cursor: pointer;
 }
 
+.buttons_container{
+    z-index: 100;
+}
+
 button:hover{
     background: #96f1bc;
 }
@@ -96,6 +100,7 @@ button:hover{
     cursor: pointer;
     max-width: 84px;
     max-height: 84px;
+    margin-top: 60px;
     border-radius: 24px;
     text-align: center;
 }
@@ -124,6 +129,10 @@ header{
     flex-direction: column;
     background: #fff;
     margin-bottom: 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 9999;
 
     input{
         padding: 8px 20px;
@@ -228,10 +237,64 @@ a{
     display: flex;
 }
 
+.items_carrito{
+    list-style: none;
+    margin: 5px;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    flex-direction: row;
+    gap: 10px;
+    flex-wrap: wrap;
+    h2{
+        font-size: 14px;
+        margin: 0;
+    }
+    p{
+        margin: 8px 0px;
+    }
+    li{
+        display: flex;
+        background: #fff;
+        padding: 40px;
+        gap: 40px;
+        border-radius: 24px;
+        margin: 0px 10px;
+    }
+    li img{
+        min-width: 100px;
+    }
+    .price_ac{
+        margin: 20px 0px;
+        font-size: 30px;
+        color: #ff5959;
+    }
+    button{
+        padding: 6px 12px;
+    }
+}
+
+.sinitems{
+    text-align: center;
+}
+
+.cantidad_carrito{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.categoria_carrito{
+    border: #59ff9e 1px solid;
+    width: fit-content;
+    padding: 5px;
+    border-radius: 12px;
+    font-size: 10px;
+}
 
 @media (max-width: 450px) {
     .category_container{
-        margin-top: 30px;
+        margin-top: 120px;
     }
 
     .phone_input{
@@ -254,6 +317,18 @@ a{
         flex-wrap: wrap;
         display: flex;
     }
+    .items_carrito{
+        gap: 20px;
+        margin: 0px 20px;
+        flex-direction: column;
+        li{
+            flex-direction: column;
+        }
+    }
+    .carrito{
+        margin-top: 200px;
+    }
+
 }
 
 @media (min-width:800px){

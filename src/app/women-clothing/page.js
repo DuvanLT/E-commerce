@@ -2,8 +2,10 @@
 import useFetch from '../api/Api';
 import { useRouter } from "next/navigation"
 import Card from "../component/Card"
-
-export default function jewellery() {
+import { CartContext } from "../context/CartProvider";
+import { useContext } from 'react';
+export default function whomen() {
+    const [cart] = useContext(CartContext)
     const router = useRouter()
     const {data} = useFetch(`https://fakestoreapi.com/products/category/women's clothing`)
 
