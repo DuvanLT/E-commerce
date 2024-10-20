@@ -61,13 +61,8 @@ export default function Header() {
                 {filteredProducts.length > 0 ? (
                     <div className='container'>
                         {filteredProducts.map((item) => (
-<<<<<<< HEAD
                             <div key={item.id} onClick={() => { router.push(`/product/${item.id}`) }}>
                                 <Card title={item.title} image={item.image} price={item.price} category={item.category} description={item.description} />
-=======
-                            <div key={item.id} onClick={() => { setFilteredProducts([]); router.push(`/product/${item.id}`) }}>
-                                <Card title={item.title} image={item.image} price={item.price} />
->>>>>>> 0731b9386bbe481fd38b3e6e42d4274eb4776ac6
                             </div>
                         ))}
                     </div>
