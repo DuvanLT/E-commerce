@@ -3,8 +3,9 @@ import { useContext} from "react";
 import { CartContext } from "../context/CartProvider";
 
 export default function Cart() {
-    const [cart] = useContext(CartContext);
-    
+    const {cart,incrementCart,lessCart} = useContext(CartContext);
+
+
     return (
         <div className="">
             <h1 className="carrito">Tu Carrito</h1>
@@ -21,11 +22,11 @@ export default function Cart() {
                             <h2>{item.title}</h2>
                             <p className="categoria_carrito">{item.category}</p>
                             <div className="cantidad_carrito">
-                            <button>-</button>
+                            <button onClick={()=> {lessCart(item.id)}}>-</button>
                             <p>{item.quantity}</p>
-                            <button>+</button>
+                            <button onClick={()=> {incrementCart(item.id)}}>+</button>
                             </div>
-                            <p className="price_ac">${item.price * item.quantity}</p>
+                            <p className="price_ac">${(item.price * item.quantity).toFixed(2)}</p>
                             </div>
                         </li>
                     ))}

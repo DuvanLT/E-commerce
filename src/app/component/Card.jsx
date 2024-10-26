@@ -1,14 +1,12 @@
-import { useRouter } from "next/navigation";
 import { useContext } from "react";
 import { CartContext } from "../context/CartProvider";
 
-export default function Card({ title, image, price, description, category }) {
-    const router = useRouter();
-    const [cart, addToCart] = useContext(CartContext); 
+export default function Card({ title, image, price, description, category,id }) {
+    const {addToCart} = useContext(CartContext); 
 
     const handleAddToCart = (event) => {
        event.stopPropagation();
-        addToCart({ title, price, image, description, category }); 
+        addToCart({ title, price, image, description, category, id }) 
     };
 
     return (

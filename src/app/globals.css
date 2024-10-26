@@ -223,7 +223,8 @@ footer{
         }
     }
     .footer_title{
-        color: #59ff9e;
+        color: #00cf56;
+        font-weight: bold;
         font-size: 20px;
     }
 p{
