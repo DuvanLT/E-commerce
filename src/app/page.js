@@ -7,7 +7,7 @@ export default function Home() {
     const { data } = useFetch('https://fakestoreapi.com/products?limit=12');
     const router = useRouter()
     return (
-      <>
+      <div className='ecommerce'>
       <Category />
         <h1>PRODUCTS</h1>
         <div className='container'>
@@ -17,6 +17,6 @@ export default function Home() {
              </div>
             ))}
         </div>
-     </>
+     </div>
   );
 }
