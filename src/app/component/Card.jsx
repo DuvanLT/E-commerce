@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { CartContext } from "../context/CartProvider";
+import Image from "next/image";
 
 export default function Card({ title, image, price, description, category,id }) {
     const {addToCart} = useContext(CartContext); 
@@ -12,7 +13,7 @@ export default function Card({ title, image, price, description, category,id }) 
     return (
         <div className="card_container">
             <div className="image_container">
-                <img src={image} alt={title} />
+                <Image src={image} alt={title} width={300} height={300} />
             </div>
             <div className="card_info">
                 <h2>{title}</h2>

@@ -5,6 +5,7 @@ import useFetch from '../../api/Api';
 import Card from '@/app/component/Card';
 import { useRouter } from 'next/navigation';
 import { CartContext } from '@/app/context/CartProvider';
+import Image from 'next/image';
 
 export default function Product() {
     const router = useRouter()
@@ -45,7 +46,7 @@ export default function Product() {
         <section className="dinamic">
             <div className='dinamic_container'>
                 <picture className='dinamic_photo'>
-                    <img src={item.image} alt={item.title} />
+                    <Image src={item.image} alt={item.title} width={300} height={300} />
                 </picture>
                 <div className='dinamic_information'>
                     <h1>{item.title}</h1>

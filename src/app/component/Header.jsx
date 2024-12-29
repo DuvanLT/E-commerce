@@ -36,7 +36,7 @@ export default function Header() {
             <header>
                 <nav className="top_nav">
                     <div className="logo" onClick={() => { router.push(`/`) }}>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="42" height="29.917808219178085" viewBox="0 0 2336 1664"><path fill="#e11d48" d="M1524 1497q0 68-48 116t-116 48t-116.5-48t-48.5-116t48.5-116.5T1360 1332t116 48.5t48 116.5m-749 0q0 68-48.5 116T610 1661t-116-48t-48-116t48-116.5t116-48.5t116.5 48.5T775 1497M0 3q57 60 110.5 104.5t121 82t136 63t166 45.5t200 31.5t250 18.5t304 9.5T1660 360q139 0 244.5 5t181 16.5t124 27.5t71 39.5t24 51.5t-19.5 64t-56.5 76.5t-89.5 91T2023 836t-139 119q-185 157-286 247q29-51 76.5-109t94-105.5T1863 889t83-91.5t54-80.5t13-70t-45.5-55.5t-116.5-41t-204-23.5t-304-5q-168 2-314-6t-256-23t-204.5-41T409 400.5T286.5 338T195 271.5T127 200t-50.5-69.5t-40-68T0 3"/></svg> MARKIT
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="38" viewBox="0 0 650 800"><path fill="#59ff9e" d="M648 256q0 2 1 3t0 3v20q0 10-7 17t-17 7h-46v324q0 10-6 16t-17 7H93q-10 0-17-7t-7-16V306H23q-10 0-16-7t-7-17v-20q0-4 1-6L60 39q5-16 17-25t28-9h439q16 0 28 9t16 25zm-138 50H139v127q0 5 4 8t8 4h347q5 0 9-4t3-8z"/></svg>MARKIT
                     </div>
                     <form className="form_desktop" onSubmit={(e) => e.preventDefault()}>
                         <input type="text" placeholder="Search a product" name="search" onChange={handleChange} />
