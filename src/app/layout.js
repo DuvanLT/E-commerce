@@ -7,8 +7,8 @@ import { CartProvider } from "./context/CartProvider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Markit",
-  description: "An E-commerce made with Fake Store API",
+  title: "Markit - Buy, Sell, Trade",
+  description: "An E-commerce made with Fake Store API for buying, selling, and trading products without limitations.",
 };
 
 export default function RootLayout({ children }) {
@@ -21,7 +21,6 @@ export default function RootLayout({ children }) {
         <Footer />
         </CartProvider>
         </body>
-      
     </html>
   );
 }

@@ -19,6 +19,8 @@ body{
     gap: 20px;
     flex-wrap: wrap;
     justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 h1,.similar{
@@ -47,7 +49,7 @@ h1,.similar{
     cursor: pointer;
 }
 .howmuch{
-    color: #ff5959;
+    color: #212529;
 }
 
 .card_container p{
@@ -70,7 +72,8 @@ h1,.similar{
 }
 
 button{
-    background: #59ff9e;
+    background: #007BFF;
+    color: #fff;
     border: none;
     padding: 10px 16px;
     border-radius: 4px;
@@ -87,7 +90,7 @@ button{
 }
 
 button:hover{
-    background: #96f1bc;
+    background: #0069da;
 }
 
 
@@ -122,7 +125,7 @@ button:hover{
     cursor: pointer;
 }
 .endpoint{
-    color: #59ff9e;
+    color: #0069da;
     font-size: 20px;
 }
 .products{
@@ -204,13 +207,13 @@ display: block;
     .price{
         font-size: 24px;
         font-weight: 600;
-        color: #ff5959;
+        color: #212529;
     }
     
 }
 
 .aside_title{
-    color: #00cf56;
+    color: #007BFF;
 }
 
 
@@ -220,7 +223,7 @@ display: block;
 }
 
 footer{
-    margin-top: 40px;
+    margin-top: 80px;
     background: #fff;
     display: flex;
     justify-content: center;
@@ -233,11 +236,15 @@ footer{
             cursor: pointer;
         }
         li:hover{
-            color: #59ff9e;
+            color: #0069da;
+        }
+        .footer_title:hover{
+            color: #000000;
+            cursor: text;
         }
     }
     .footer_title{
-        color: #00cf56;
+        color: #212529;
         font-weight: bold;
         font-size: 20px;
     }
@@ -245,7 +252,7 @@ p{
     text-align: center;
 }
 a{
-    color: #ff5959;
+    color:#007BFF;
 }
 }
 .footer_socialMedia, .footer_container{
@@ -283,7 +290,7 @@ a{
     .price_ac{
         margin: 20px 0px;
         font-size: 30px;
-        color: #ff5959;
+        color: #212529;
     }
     button{
         padding: 6px 12px;
@@ -300,7 +307,7 @@ a{
     gap: 10px;
 }
 .categoria_carrito{
-    border: #59ff9e 1px solid;
+    border: #007BFF 1px solid;
     width: fit-content;
     padding: 5px;
     border-radius: 12px;
@@ -337,7 +344,7 @@ main{
 }
 
 .carrito_container{
-    height: 90vh;
+    min-height: 90vh;
 }
 
 u{
