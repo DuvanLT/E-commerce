@@ -9,7 +9,7 @@ export default function Home() {
     return (
       <div className='ecommerce'>
       <Category />
-        <h1>PRODUCTS</h1>
+        <h1 className='allproducts'>All our Products</h1>
         <div className='container'>
             {data.map(item => (
             <div  key={item.id} onClick={() => { router.push(`/product/${item.id}`)}}>

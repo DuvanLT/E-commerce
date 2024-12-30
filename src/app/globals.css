@@ -22,15 +22,23 @@ body{
   
 }
 
+.allproducts{
+    text-align: center;
+}
+
 .ecommerce{
     max-width: 1200px;
     margin: 0 auto;
 }
 
 h1,.similar{
-    margin-left: 65px;
     margin-top: 80px;
 }
+
+.similar{
+    text-align: center;
+}
+
 .card_container{
     min-width: 250px;
     max-width: 320px;
@@ -377,6 +385,7 @@ u{
         display: none;
     }
 
+
 }
 
 @media (max-width: 700px) {
@@ -385,7 +394,6 @@ u{
     }
     h1,.similar{
         margin: 80px 0;
-        text-align: center;
     }
     .footer_container{
         flex-wrap: wrap;
@@ -413,7 +421,6 @@ u{
         justify-content: center;
         height: fit-content;
     }
-    
 }
 
 @media (min-width:800px){
