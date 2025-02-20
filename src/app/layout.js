@@ -1,15 +1,15 @@
-import { Inter } from "next/font/google";
-import Header from "./component/Header";
-import "./globals.css";
-import Footer from "./component/Footer";
-import { CartProvider } from "./context/CartProvider";
+import { Inter } from "next/font/google"
+import Header from "./components/Header"
+import "./globals.css"
+import Footer from "./components/Footer"
+import { CartProvider } from "./context/CartProvider"
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"] })
 
 export const metadata = {
   title: "Markit - Buy, Sell, Trade",
   description: "An E-commerce made with Fake Store API for buying, selling, and trading products without limitations.",
-};
+}
 
 export default function RootLayout({ children }) {
   return (
@@ -22,5 +22,5 @@ export default function RootLayout({ children }) {
         </CartProvider>
         </body>
     </html>
-  );
+  )
 }

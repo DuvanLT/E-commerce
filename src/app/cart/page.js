@@ -1,11 +1,11 @@
 'use client'
-import { useContext} from "react";
-import { CartContext } from "../context/CartProvider";
-import { useRouter } from "next/navigation";
-import Image from "next/image";
+import { useContext} from "react"
+import { CartContext } from "../context/CartProvider"
+import { useRouter } from "next/navigation"
+import Image from "next/image"
 export default function Cart() {
-    const {cart,incrementCart,lessCart} = useContext(CartContext);
-    const router = useRouter();
+    const {cart,incrementCart,lessCart} = useContext(CartContext)
+    const router = useRouter()
 
     return (
         <div className="carrito_container">
@@ -34,5 +34,5 @@ export default function Cart() {
                 </ul>
             )}
         </div>
-    );
+    )
 }

@@ -1,13 +1,13 @@
 'use client'
-import React, { createContext, useState,useEffect } from "react";
+import React, { createContext, useState,useEffect } from "react"
 
-export const CartContext = createContext();
+export const CartContext = createContext()
 
 const saveCartToLocalStorage = (cart) => {
     if (typeof window !== 'undefined') {
         localStorage.setItem('cart', JSON.stringify(cart))
     }
-};
+}
 
 const getCartFromLocalStorage = () => {
     if (typeof window !== 'undefined') {
@@ -18,11 +18,11 @@ const getCartFromLocalStorage = () => {
 }
 
 export const CartProvider = ({ children }) => {
-    const [cart, setCart] = useState(getCartFromLocalStorage());
+    const [cart, setCart] = useState(getCartFromLocalStorage())
 
     useEffect(() => {
         saveCartToLocalStorage(cart)
-    }, [cart]);
+    }, [cart])
 
     const addToCart = (product) => {
         const productIn = cart.find(item => item.id === product.id)
@@ -30,7 +30,7 @@ export const CartProvider = ({ children }) => {
             console.log(productIn)
             setCart(cart.map(item => 
                 item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item
-            ));
+            ))
         } else {
             setCart([...cart, { ...product, quantity: 1 }])
         }
@@ -39,7 +39,7 @@ export const CartProvider = ({ children }) => {
     const incrementCart = (id) => {
         setCart(cart.map(item =>
             item.id === id ? { ...item, quantity: item.quantity + 1 } : item
-        ));
+        ))
     }
 
     const lessCart = (id) => {
@@ -53,5 +53,5 @@ export const CartProvider = ({ children }) => {
         <CartContext.Provider value={{cart, addToCart,incrementCart,lessCart}}>
             {children}
         </CartContext.Provider>
-    );
-};
+    )
+}

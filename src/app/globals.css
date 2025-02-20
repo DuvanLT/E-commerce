@@ -19,7 +19,11 @@ body{
     gap: 20px;
     flex-wrap: wrap;
     justify-content: center;
-  
+}
+
+.container__product{
+    text-decoration: none;
+    color: #000;
 }
 
 .allproducts{
@@ -135,6 +139,8 @@ button:hover{
     margin-left: 20px;
     font-size: 20px;
     cursor: pointer;
+    text-decoration: none;
+    color: #000;
 }
 .endpoint{
     color: #0069da;
